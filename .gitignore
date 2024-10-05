@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Truffle build directory
+build/
+
+# Truffle artifacts
+*.json
+
+# Environment variables
+.env
+
+# MacOS specific files
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp

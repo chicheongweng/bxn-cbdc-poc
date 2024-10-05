@@ -5,7 +5,7 @@ node_modules/
 build/
 
 # Truffle artifacts
-*.json
+build/contracts/*.json
 
 # Environment variables
 .env
@@ -24,3 +24,4 @@ coverage/
 .vscode/
 .idea/
 *.swp
+

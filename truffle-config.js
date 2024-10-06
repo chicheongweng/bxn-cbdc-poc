@@ -22,6 +22,22 @@ module.exports = {
       timeoutBlocks: 200,   // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true      // Skip dry run before migrations? (default: false for public nets )
     },
+    mumbai: {
+      provider: () => new HDWalletProvider(mnemonic, `https://polygon-mumbai.infura.io/v3/${infuraKey}`),
+      network_id: 80001, // Mumbai's id
+      gas: 5500000,         // Mumbai has a higher block limit than mainnet
+      confirmations: 2,     // # of confirmations to wait between deployments. (default: 0)
+      timeoutBlocks: 200,   // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true      // Skip dry run before migrations? (default: false for public nets )
+    },
+    polygon_zkevm: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rpc.public.zkevm-test.net`),
+      network_id: 1442, // Polygon zkEVM testnet's id
+      gas: 5500000,         // Polygon zkEVM testnet has a higher block limit than mainnet
+      confirmations: 2,     // # of confirmations to wait between deployments. (default: 0)
+      timeoutBlocks: 200,   // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true      // Skip dry run before migrations? (default: false for public nets )
+    },
   },
   compilers: {
     solc: {

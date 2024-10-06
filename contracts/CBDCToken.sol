@@ -14,5 +14,14 @@ contract CBDCToken is ERC20 {
         require(msg.sender == admin, "only admin can mint");
         _mint(to, amount);
     }
-}
 
+    function deposit() external payable {
+        _mint(msg.sender, msg.value);
+    }
+
+    function withdraw(uint256 amount) external {
+        require(balanceOf(msg.sender) >= amount, "insufficient balance");
+        _burn(msg.sender, amount);
+        payable(msg.sender).transfer(amount);
+    }
+}
